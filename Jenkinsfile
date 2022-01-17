@@ -41,6 +41,7 @@ pipeline {
                    unstash "terraform-plan"
                    sh 'terraform apply terraform.tfplan'
 }
+}
             }
         }
     }
