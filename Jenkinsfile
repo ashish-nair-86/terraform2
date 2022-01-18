@@ -31,6 +31,7 @@ pipeline {
               script {
                 def apply = false
                 try {
+                   sh 'terraform show terraform.tfplan'
                    input message: 'Can you please confirm the apply', ok: 'Ready to Apply the Config'
                    apply = true
                     } catch (err) {
